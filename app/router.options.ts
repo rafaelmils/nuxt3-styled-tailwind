@@ -1,12 +1,12 @@
 import type { RouterConfig } from '@nuxt/schema'
-import AppLayout from '@/layouts/AppLayout.vue'
+// import AppLayout from '@/layouts/AppLayout.vue'
 
 export default {
   // https://router.vuejs.org/api/interfaces/routeroptions.html#routes
   routes: (_routes) => [
     {
         path: '/',
-        component: AppLayout,
+        component: () => import('~/layouts/AppLayout.vue'),
         children: [
             {
                 path: '/master',
