@@ -1,29 +1,42 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 import Aura from "@primeuix/themes/aura";
 import PrimeUI from "tailwindcss-primeui";
 
 export default defineNuxtConfig({
-  devtools: { enabled: false },
-  modules: ["@nuxtjs/tailwindcss", "@primevue/nuxt-module"],
+  compatibilityDate: '2024-11-01',
+  devtools: { enabled: true },
+
+  modules: [
+    '@nuxt/content',
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@nuxt/test-utils',
+    '@nuxtjs/tailwindcss',
+    "@primevue/nuxt-module"
+  ],
 
   primevue: {
-      options: {
-          theme: {
-              preset: Aura,
-              options: {
-                  darkModeSelector: ".p-dark",
-                  cssLayer: {
-                      name: 'primevue',
-                      order: 'theme, primevue'
-                  }
-              },
-          },
-          ripple: true,
-      },
-      autoImport: true,
-  },
+    options: {
+        theme: {
+            preset: Aura,
+            options: {
+                darkModeSelector: ".p-dark",
+                cssLayer: {
+                    name: 'primevue',
+                    order: 'theme, primevue'
+                }
+            },
+        },
+        ripple: true,
+    },
+    autoImport: true,
+},
 
-  css: ["primeicons/primeicons.css"],
+css: ["primeicons/primeicons.css"],
 
   tailwindcss: {
       config: {
@@ -31,6 +44,4 @@ export default defineNuxtConfig({
           darkMode: ["class", ".p-dark"],
       },
   },
-
-  compatibilityDate: "2025-03-18",
-});
+})
