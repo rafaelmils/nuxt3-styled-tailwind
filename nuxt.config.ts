@@ -4,13 +4,17 @@ import PrimeUI from "tailwindcss-primeui";
 
 export default defineNuxtConfig({
     devtools: { enabled: false },
-    modules: ["@nuxtjs/tailwindcss", "@primevue/nuxt-module"],
+    modules: ["@nuxtjs/tailwindcss", "@primevue/nuxt-module", '@nuxt/content'],
     primevue: {
         options: {
             theme: {
                 preset: Aura,
                 options: {
                     darkModeSelector: ".p-dark",
+                    cssLayer: {
+                        name: 'primevue',
+                        order: 'theme, primevue'
+                    }
                 },
             },
             ripple: true,
