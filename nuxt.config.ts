@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/test-utils',
     '@nuxtjs/tailwindcss',
-    "@primevue/nuxt-module"
+    "@primevue/nuxt-module",
+    '@nuxthq/studio'
   ],
 
   primevue: {
