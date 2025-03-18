@@ -34,6 +34,12 @@ export default defineNuxtConfig({
         ripple: true,
     },
     autoImport: true,
+
+    content: {
+        preview: {
+          api: 'https://api.nuxt.studio'
+        }
+      }
 },
 
 css: ["primeicons/primeicons.css"],
