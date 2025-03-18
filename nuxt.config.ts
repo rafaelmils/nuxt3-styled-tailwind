@@ -37,7 +37,12 @@ export default defineNuxtConfig({
 
     content: {
         preview: {
-          api: 'https://api.nuxt.studio'
+          api: 'https://api.nuxt.studio',
+          gitInfo: {
+            name: 'nuxt3-styled-tailwind',
+            owner: 'rafaelmils',
+            url: 'https://github.com/rafaelmils/nuxt3-styled-tailwind'
+          }
         }
       }
 },
